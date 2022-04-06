@@ -32,8 +32,10 @@ shopt -s histverify
 
 export EDITOR=vi
 
-export PS1='\[\e[0;32m\]\u@\h \W\[\e[0m\]$ '  # Green
-#export PS1='\[\e[1;32m\]\u@\h \W\[\e[0m\]$ '  # Bold Green
+#export PS1='\[\e[1;32m\][\W]$\[\e[0m\] '  # Green
+#export PS1='\[\e[0;32m\]\u@\h \W\[\e[0m\]$ '  # Green
+export PS1='\[\e[1;32m\]\u@\h \W\[\e[0m\]$ '  # Bold Green
+export PROMPT_DIRTRIM=3
 
 export PATH=.:$HOME/bin:$PATH
 
