@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(cua-mode t nil (cua-base))
  '(package-selected-packages
-   '(markdown-mode go-playground go-imports go-imenu go-complete dockerfile-mode docker-compose-mode docker-cli)))
+   '(wc-mode ejson-mode markdown-mode go-playground go-imports go-imenu go-complete dockerfile-mode docker-compose-mode docker-cli)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
