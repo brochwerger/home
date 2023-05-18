@@ -6,12 +6,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 # User specific environment
 #export PS1='\[\e[1;32m\]\u@\h \W \[\e[91m\]\[\e[0m\] 👉 '  # Bold Green
-export PS1="\u@\h \[\e[1;32m\]\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+export PS1="\[\e[32m\][\u@\h:\W\[\e[1;91m\]\$(parse_git_branch)\[\e[32m\]]\[\e[00m\]\$ "
+#export PS1="\[\e[32m\][\u@\h:\W\$(parse_git_branch)]\[\e[00m\]\$ "
 export PROMPT_DIRTRIM=3
 export GOPATH=$HOME/repos
 
