@@ -21,11 +21,6 @@ then
 fi
 export PATH
 
-# Setup GO
-export GOROOT=/opt/go
-export GOPATH=$HOME/repos
-PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
-
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -37,14 +32,12 @@ if [ -d ~/.bashrc.d ]; then
 		fi
 	done
 fi
-
 unset rc
 
+alias rm='rm -i'
+alias mv='mv -i'
 shopt -s histverify
 export EDITOR=vi
-alias k=kubectl
-complete -o default -F __start_kubectl k
-
 
 ## Autostart tmux
 ## [ -z "$TMUX" ] && [ "$TERM" == "xterm-256color" ] && { tmux attach || exec tmux new-session && exit;}
