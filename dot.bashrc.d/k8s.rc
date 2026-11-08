@@ -1,0 +1,9 @@
+# Enable native kubectl completion
+source <(kubectl completion bash)
+
+# Create the alias
+alias k=kubectl
+
+# Bind the autocomplete to the alias
+complete -o default -F __start_kubectl k
+

@@ -1,0 +1,5 @@
+if ! [[ "$PATH" =~ ".:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH" ]]
+then
+    PATH=".:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH"
+fi
+export PATH
